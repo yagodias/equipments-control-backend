@@ -16,8 +16,4 @@
     <ProjectReference Include="..\equipmentes-control.Persistence\equipmentes-control.Persistence.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
