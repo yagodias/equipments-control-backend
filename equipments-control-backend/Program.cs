@@ -1,13 +1,13 @@
-using equipments_control_backend.Models;
-using Microsoft.EntityFrameworkCore;
+using equipmentes_control.Persistence.Configs;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var connectionString = builder.Configuration.GetConnectionString("MySql");
+
 // Add services to the container.
+builder.Services.AddDatabaseModule(connectionString);
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<TodoContext>(opt =>
-    opt.UseInMemoryDatabase("TodoList"));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
